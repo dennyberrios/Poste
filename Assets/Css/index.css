@@ -1,0 +1,406 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-Poste: rgb(211, 211, 211);
+    --cor-Luz: rgb(163, 163, 163);
+    --cor-Fundo: rgb(22, 22, 22);
+    --cor-Personagem: rgb(91, 91, 161);
+}
+
+body {
+    background-color: var(--cor-Fundo);
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1360px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.poste {
+    width: 12px;
+    height: 500px;
+    background-color: var(--cor-Poste);
+    position: absolute;
+    right: 450px;
+    top: 40px;
+    border-radius: 5px 5px 0 0;
+}
+
+.sombraPoste {
+    width: 200px;
+    height: 12px;
+    background-color: var(--cor-Fundo);
+    position: absolute;
+    top: 528px;
+    right: 250px;
+}
+
+.suporteLampada {
+    width: 200px;
+    height: 8px;
+    transform: rotate(15deg);
+    background-color: var(--cor-Poste);
+    position: absolute;
+    top: 100px;
+    right: 450px;
+}
+
+.bocal {
+    width: 50px;
+    height: 40px;
+    background-color: var(--cor-Poste);
+    transform: perspective(64px) rotateX(60deg) rotateY(20deg);
+    position: absolute;
+    top: 55px;
+    right: 630px;
+}
+
+.luz {
+    width: 80px;
+    height: 120px;
+    transform: perspective(64px) rotateX(60deg) rotateY(15deg);
+    filter: blur(5px);
+    position: absolute;
+    top: 44px;
+    right: 620px;
+    z-index: 1;
+}
+
+.luzBtn {
+    background-color: var(--cor-Luz);
+}
+
+.luzChao {
+    width: 1000px;
+    height: 150px;
+    
+    position: absolute;
+    top: 470px;
+    left: 50px;
+    border-radius: 50%;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.luzChaoBtn {
+    background-color: var(--cor-Luz);
+}
+
+.interruptor {
+    width: 150px;
+    height: 250px;
+    background-color: rgb(66, 66, 66);
+    position: absolute;
+    top: 44px;
+    right: 70px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.btn {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+    color: rgb(230, 230, 230);
+    background-color: rgb(97, 97, 97);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 3px solid black;
+    transition: .3s;
+}
+
+.btnOn {
+    border: 3px solid greenyellow;
+    color: greenyellow;
+}
+
+.Off {
+    border: 3px solid red;
+    color: red;
+}
+
+.tomada {
+    width: 70%;
+    height: 45px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: 1px solid black;
+}
+
+.tomada1{
+    width: 80%;
+    height: 20px;
+    background-color: rgb(97, 97, 97);
+    transform: perspective(64px) rotateX(45deg);
+    position: absolute;
+    top: 2.5px;
+}
+
+.buraco1{
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+.tomada2{
+    width: 80%;
+    height: 20px;
+    background-color: rgb(97, 97, 97);
+    transform: perspective(64px) rotateX(-45deg);
+    position: absolute;
+    top: 18px;
+}
+
+.buraco2{
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    left: 30px;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100%;
+    transform: perspective(64px) rotate(1deg);
+}
+
+.buraco3{
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    left: 70px;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100%;
+    transform: perspective(64px) rotate(1deg);
+}
+
+.personagem {
+    position: absolute;
+    top: 280px;
+    left: 600px;
+    width: 100px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabeca {
+    width: 80px;
+    height: 80px;
+    background-color: var(--cor-Personagem);
+    border-radius: 50%;
+    position: relative;
+}
+
+
+.olho1{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    border-radius: 0 8px 0 8px;
+    transform: rotate(-60deg);
+}
+
+.olho2{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    border-radius: 0 8px 0 8px;
+    transform: rotate(-35deg);
+}
+
+.nariz {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 55px;
+    left: 36px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    transform: rotate(-20deg);
+}
+
+.boca {
+    width: 20px;
+    height: 5px;
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    border-top: 3px solid black;
+    border-radius: 20px 20px 0 0;
+}
+
+.olho1Feliz{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    border-radius: 0 8px 0 8px;
+    transform: rotate(-40deg);
+}
+
+.olho2Feliz{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border-radius: 0 8px 0 8px;
+    transform: rotate(-55deg);
+}
+
+.narizFeliz {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 20px;
+    left: 36px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    transform: rotate(-20deg);
+}
+
+.bocaFeliz {
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    background: black;
+    border-radius: 50%;
+}
+
+.corpo {
+    width: 10px;
+    height: 100px;
+    background-color: var(--cor-Personagem);
+}
+
+.braco1 {
+    width: 10px;
+    height: 80px;
+    background-color: var(--cor-Personagem);
+    position: absolute;
+    top: 95px;
+    left: 31px;
+    transform: rotate(20deg);
+    border-radius: 0 0 15px 15px;
+}
+
+.braco2 {
+    width: 10px;
+    height: 80px;
+    background-color: var(--cor-Personagem);
+    position: absolute;
+    top: 95px;
+    right: 31px;
+    transform: rotate(-20deg);
+    border-radius: 0 0 15px 15px;
+}
+
+.braco1Feliz {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    transform: rotate(-50deg);
+    border-radius: 15px 15px 0 0;
+}
+
+.braco2Feliz {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    transform: rotate(50deg);
+    border-radius: 15px 15px 0 0;
+}
+
+.perna1 {
+    width: 10px;
+    height: 80px;
+    background-color: var(--cor-Personagem);
+    position: absolute;
+    top: 170px;
+    left: 25px;
+    transform: rotate(30deg);
+    border-radius: 0 0 15px 15px;
+}
+.perna2 {
+    width: 10px;
+    height: 80px;
+    background-color: var(--cor-Personagem);
+    position: absolute;
+    top: 170px;
+    right: 25px;
+    transform: rotate(-30deg);
+    border-radius: 0 0 15px 15px;
+}
+
+.sombraPersona {
+    width: 100px;
+    height: 100px;
+    background-color: var(--cor-Fundo);
+    position: absolute;
+    top: 450px;
+    left: 600px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.bracoD {
+    width: 60px;
+    height: 10px;
+    background: var(--cor-Fundo);
+    transform: rotate(50deg);
+    position: absolute;
+    top: 10px;
+    left: -40px;
+}
+
+.bracoE {
+    width: 60px;
+    height: 10px;
+    background: var(--cor-Fundo);
+    transform: rotate(-50deg);
+    position: absolute;
+    top: 10px;
+    right: -40px;
+}
